@@ -1,11 +1,10 @@
 import React from 'react'
+import StatsDisplay from './components/StatsDisplay'
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold underline text-blue-700">
-        Hello world!
-      </h1>
+      <StatsDisplay />
     </div>
   )
 }
