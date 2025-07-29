@@ -4,6 +4,7 @@ import TypingArea from "./components/TypingArea";
 import RestartButton from "./components/RestartButton";
 import Spinner from "./components/Spinner";
 import { useTypingGame } from "./hooks/useTypingGame";
+import { fetchTypingText } from "./services/geminiService";
 const App = () => {
 
 const [textToType, setTextToType]= useState('');
@@ -23,7 +24,7 @@ const [textToType, setTextToType]= useState('');
   const getNewText = useCallback(async () => {
     setLoading(true);
     try{
-      const newText =await feachTypingText();
+      const newText =await fetchTypingText();
       setTextToType(newText);
       resetGame(newText);
 
@@ -56,7 +57,7 @@ const [textToType, setTextToType]= useState('');
         </header>
 
         <main className="bg-slate-800/50 rounded-lg shadow-2xl shadow-cyan-500/50 p-6 md:p-8 ">
-          <StatsDisplay />
+          <StatsDisplay wpm={wpm} accuracy={accuracy} timer={timer} />
 
           <div>
             {loading ? (
