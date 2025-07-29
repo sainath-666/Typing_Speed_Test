@@ -10,13 +10,13 @@ const [textToType, setTextToType]= useState('');
   const [loading, setLoading] = useState(true);
 
   const {
-    // gameState,
-    // typed,
-    // timer,
-    // wpm,
-    // accuracy,
+    gameState,
+    typed,
+    timer,
+    wpm,
+    accuracy,
     resetGame,
-    // totalErrors,
+    totalErrors,
   } = useTypingGame(textToType);
 
 
