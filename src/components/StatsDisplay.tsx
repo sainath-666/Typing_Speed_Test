@@ -13,9 +13,9 @@ const StatCard = ({ label, value, colorClass }) => {
 
 function StatsDisplay() {
   // Example wpm value, replace with actual logic or props as needed
-  const wpm = 0;
-  const accuracy = 0;
-  const timer = 0;
+  const wpm = 22;
+  const accuracy = 99.8;
+  const timer = 100;
 
   return (
     <div className="grid grid-cols-3 gap-4 md:gap-6 mb-6">
