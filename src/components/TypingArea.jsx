@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Character = React.memo(({ char, state }) => {
   let className = "transition-colors duration-200 ease-in-out ";
   let characterToDisplay = char;
@@ -41,10 +40,10 @@ function TypingArea({ text, typed }) {
 
   return (
     <div
-      className="text-2xl leading-relaxed tracking-wider bg-slate-900/70 p-4 rounded-md focus:outline-none select-none"
+      className="text-lg md:text-xl font-mono leading-relaxed tracking-wide bg-slate-900/70 p-6 rounded-md focus:outline-none select-none min-h-[200px] flex items-center"
       tabIndex={0}
     >
-      {characters}
+      <div className="max-w-2xl mx-auto">{characters}</div>
     </div>
   );
 }
