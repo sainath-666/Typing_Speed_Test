@@ -1,5 +1,6 @@
 import React from "react";
 import StatsDisplay from "./components/StatsDisplay";
+import TypingArea from "./components/TypingArea";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
 
         <main className="bg-slate-800/50 rounded-lg shadow-2xl shadow-cyan-500/50 p-6 md:p-8 ">
           <StatsDisplay />
+          <TypingArea text={"sa"}  typed={"sai"}/>
           
         </main>
 
