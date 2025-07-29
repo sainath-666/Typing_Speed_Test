@@ -1,11 +1,7 @@
 import React from "react";
 
-type CharacterProps = {
-  char: string;
-  state: "correct" | "incorrect" | "untyped" | "cursor";
-};
 
-const Character = React.memo(({ char, state }: CharacterProps) => {
+const Character = React.memo(({ char, state }) => {
   let className = "transition-colors duration-200 ease-in-out ";
   let characterToDisplay = char;
 
@@ -33,7 +29,7 @@ const Character = React.memo(({ char, state }: CharacterProps) => {
 function TypingArea({ text, typed }) {
   const characters = React.useMemo(() => {
     return text.split("").map((char, index) => {
-      let state: "correct" | "incorrect" | "untyped" | "cursor" = "untyped";
+      let state = "untyped";
       if (index < typed.length) {
         state = typed[index] === char ? "correct" : "incorrect";
       } else if (index === typed.length) {
