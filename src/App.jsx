@@ -38,7 +38,7 @@ const App = () => {
       <div className="w-full max-w-3xl mx-auto">
         <header className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-cyan-400">
-            Typing Speed Text
+            Typing Speed Test
           </h1>
           <p className="text-slate-400 mt-2">
             How fast can you type? The timer starts when you begin typing.
@@ -91,8 +91,38 @@ const App = () => {
           </div>
         </main>
 
-        <footer className="text-center mt-8 text-slate-500 text-sm">
+        <footer className="text-center mt-8 text-slate-500 text-sm space-y-2">
           <p>Powered by React, Tailwind CSS and Google Gemini</p>
+          <div className="flex items-center justify-center space-x-4">
+            <a
+              href="https://github.com/sainath-666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors"
+            >
+              GitHub
+            </a>
+            <span>•</span>
+            <a
+              href="https://linkedin.com/in/sainath666"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <p>
+            © {new Date().getFullYear()} Built with ❤️ by{" "}
+            <a
+              href="https://wa.link/ht3rv4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-cyan-400 transition-colors"
+            >
+              Sainathreddy
+            </a>
+          </p>
         </footer>
       </div>
     </div>
