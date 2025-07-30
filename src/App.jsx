@@ -5,6 +5,7 @@ import RestartButton from "./components/RestartButton";
 import Spinner from "./components/Spinner";
 import { useTypingGame, GameState } from "./hooks/useTypingGame";
 import { fetchTypingText } from "./services/geminiService";
+import AdUnit from "./components/AdUnit";
 const App = () => {
   const [textToType, setTextToType] = useState("");
   const [loading, setLoading] = useState(true);
@@ -37,6 +38,7 @@ const App = () => {
     <div className="min-h-screen bg-slate-900 text-slate-300 flex flex-col items-center justify-center p-4 md:p-8 transition-colors duration-300">
       <div className="w-full max-w-3xl mx-auto">
         <header className="text-center mb-8">
+          <AdUnit />
           <h1 className="text-4xl md:text-5xl font-bold text-cyan-400">
             Typing Speed Test
           </h1>
@@ -90,6 +92,9 @@ const App = () => {
             </div>
           </div>
         </main>
+        <AdUnit />
+        <AdUnit />
+        <AdUnit />
 
         <footer className="text-center mt-8 text-slate-500 text-sm space-y-2">
           <p>Powered by React, Tailwind CSS and Google Gemini</p>
